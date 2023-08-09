@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Length Converter</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Metre to Centimetre</h2>
+        <div >
+            <input type="text" id="input" placeholder="length in metre">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Convert to centimetre</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+      function convert(){
+        const mVal = Number(document.getElementById("input").value)
+        const cmVal = mVal/0.01
+        const result = document.getElementById("result")
+        result.innerHTML = cmVal.toFixed(3) + " cm"
+      }
+    </script>
+</body>
+</html>
